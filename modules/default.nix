@@ -9,7 +9,7 @@
     ./fonts.nix
     ./localization.nix
     ./networking.nix
-    ./user.nix
+    ./users.nix
   ];
 }
 

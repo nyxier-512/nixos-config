@@ -4,47 +4,7 @@
   fonts = {
     enableDefaultPackages = true;
     fontDir.enable = true;
-    # fontconfig settings for better text clarity on lcd screens
-    fontconfig = {
-      enable         = true;  
-      antialias      = true;
-      hinting.enable = true;
-      hinting.style  = "slight";
-      subpixel.rgba  = "rgb";
-      subpixel.lcdfilter = "default";
-
-      defaultFonts = {
-        monospace = [
-          "JetBrainsMono Nerd Font Propo"
-          "Inter"
-          "Noto Sans"
-          "Noto Sans CJK JP"
-          "Noto Sans CJK SC"
-          "Noto Sans CJK KR"
-          "Noto Sans CJK TC"
-          "Noto Sans CJK HK"
-        ];
-        serif = [
-          "Inter"
-          "Noto Sans"
-          "Noto Sans CJK JP"
-          "Noto Sans CJK SC"
-          "Noto Sans CJK KR"
-          "Noto Sans CJK TC"
-          "Noto Sans CJK HK"
-        ];
-        sansSerif = [
-          "Inter"
-          "Noto Sans"
-          "Noto Sans CJK JP"
-          "Noto Sans CJK SC"
-          "Noto Sans CJK KR"
-          "Noto Sans CJK TC"
-          "Noto Sans CJK HK"
-        ];
-      };
-    };
-   
+  
     packages = with pkgs; [
       noto-fonts-cjk-sans
       noto-fonts

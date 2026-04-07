@@ -8,11 +8,5 @@
       ];
       ly.enable=true;
     };
-
-    # keymap for x11
-    xserver.xkb = {
-      layout = "us";
-      variant = "";
-    };
   };
 }

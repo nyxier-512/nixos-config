@@ -45,6 +45,7 @@
 '';
 
   dconf.settings = {
+    programs.dconf.enable = true;
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
     };

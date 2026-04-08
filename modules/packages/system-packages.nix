@@ -20,5 +20,8 @@
     nixd
     fd
     ripgrep
+    kanagawa-gtk-theme
+    kanagawa-icon-theme
+    bibata-cursors
   ];
 }

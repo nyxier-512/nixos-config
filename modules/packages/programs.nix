@@ -7,4 +7,5 @@
     enable  = true;
     defaultEditor = true;
   };
+  programs.dconf.enable = true;
 }

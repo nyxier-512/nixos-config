@@ -20,6 +20,17 @@
   };
 
   
+  gtk = {
+    enable = true;
+    iconTheme.name = "Kanagawa";
+    theme.name = "Kanagawa";
+    font.package = pkgs.inter-nerdfont;
+    font.name = "Inter";
+    font.size = 12;
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
+    gtk4.extraConfig.gtk-application-prefer-dark-theme = true;
+  };
+  
   home.file.".config/fontconfig/conf.d/60-ui-sans-serif.conf".text = ''
   <?xml version="1.0"?>
   <!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
@@ -43,9 +54,14 @@
     </alias>
   </fontconfig>
 '';
-
+home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package    = pkgs.bibata-cursors;
+    name       = "Bibata-Modern-Ice";
+    size       = 24;
+  };
   dconf.settings = {
-    programs.dconf.enable = true;
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
     };

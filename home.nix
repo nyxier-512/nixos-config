@@ -23,7 +23,7 @@
   gtk = {
     enable = true;
     iconTheme.name = "Kanagawa";
-    theme.name = "Kanagawa";
+    theme.name = "Kanagawa-B";
     font.package = pkgs.inter-nerdfont;
     font.name = "Inter";
     font.size = 12;
@@ -54,7 +54,7 @@
     </alias>
   </fontconfig>
 '';
-home.pointerCursor = {
+  home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
     package    = pkgs.bibata-cursors;
@@ -71,11 +71,14 @@ home.pointerCursor = {
   };
   xdg.userDirs = {
     enable = true;
+    desktop     = "${config.home.homeDirectory}/Desktop";
     documents   = "${config.home.homeDirectory}/Documents";
     download    = "${config.home.homeDirectory}/Downloads";
     music       = "${config.home.homeDirectory}/Music";
     pictures    = "${config.home.homeDirectory}/Pictures";
     videos      = "${config.home.homeDirectory}/Videos";
+    publicShare = "${config.home.homeDirectory}/Public";
+    templates   = "${config.home.homeDirectory}/Templates";
     createDirectories = true;
   };
   home.stateVersion = "25.11";

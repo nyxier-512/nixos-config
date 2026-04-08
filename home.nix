@@ -19,5 +19,30 @@
     ".config/nvim/init.lua".source = ./dotfiles/nvim/init.lua;
   };
 
+  
+  home.file.".config/fontconfig/conf.d/60-ui-sans-serif.conf".text = ''
+  <?xml version="1.0"?>
+  <!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+  <fontconfig>
+    <alias>
+      <family>ui-sans-serif</family>
+      <prefer>
+        <family>Inter</family>
+        <family>Noto Sans</family>
+        <family>DejaVu Sans</family>
+      </prefer>
+    </alias>
+
+    <alias>
+      <family>system-ui</family>
+      <prefer>
+        <family>Inter</family>
+        <family>Noto Sans</family>
+        <family>DejaVu Sans</family>
+      </prefer>
+    </alias>
+  </fontconfig>
+'';
+
   home.stateVersion = "25.11";
 }

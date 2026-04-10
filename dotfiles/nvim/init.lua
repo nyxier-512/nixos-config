@@ -8,6 +8,7 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.signcolumn = "yes"
 vim.opt.laststatus = 3
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.diagnostic.config({
     virtual_text = true,
@@ -21,6 +22,9 @@ vim.diagnostic.config({
 vim.keymap.set('n', 'gl', vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = "Show LSP hover information" })
 vim.keymap.set("n", "<leader>e", function() Snacks.explorer() end, { desc = "Toggle Explorer" })
+vim.keymap.set("n", "<leader>ss", function() require("resession").save() end, { desc = "Save Session" })
+vim.keymap.set("n", "<leader>sl", function() require("resession").load() end, { desc = "Load Session" })
+vim.keymap.set("n", "<leader>sd", function() require("resession").delete() end, { desc = "Delete Session" })
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -98,9 +102,25 @@ require("lazy").setup({
         "rebelot/kanagawa.nvim",
         priority = 1000,
         config = function()
+            require('kanagawa').setup({
+            colors = {
+                theme = {
+                    all = {
+                        ui = {
+                            bg_gutter = "none"
+                        }
+                    }
+                }
+            },
+        })
             vim.cmd.colorscheme("kanagawa")
         end,
     },
+
+{
+  'stevearc/resession.nvim',
+  opts = {},
+},
 
     {
         'romgrk/barbar.nvim',
@@ -219,8 +239,7 @@ require("lazy").setup({
               { icon = " ", key = "c", desc = "Create New File", action = ":ene | startinsert" },
               { icon = " ", key = "t", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
               { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('recent')" },
-              { icon = " ", key = "n", desc = "NixOS Config", action = ":lua Snacks.dashboard.pick('files', { cwd = vim.fn.expand('~/nixos-config') })" },
-              { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+              { icon = " ", key = "s", desc = "Load Session", action = function() require("resession").load() end },
               { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
               { icon = " ", key = "q", desc = "Quit", action = ":qa" },
             },

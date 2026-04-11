@@ -1,103 +1,67 @@
-// Inspired by Catnap
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-"logo": {
-        "source": "$HOME/.config/fastfetch/figlet-3d-logo.txt",
-        "type": "file",
-        "position": "top",
-        "padding": {
-            "right": 0
-        },
-        "color": {
-            "1": "34",
-            "2": "34"
-        }
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "$HOME/.config/fastfetch/figlet-3d-logo.txt",
+    "type": "file",
+    "position": "top",
+    "padding": {
+      "right": 0
     },
-    "display": {
-        "separator": " "
+    "color": {
+      "1": "34",
+      "2": "34"
+    }
+  },
+  "display": {
+    "separator": ""
+  },
+  "modules": [
+    {
+      "key": "{#31}{icon} distro  {#keys}{#37}  ",
+      "type": "os"
     },
-    "modules": [
-        {
-            "key": "{#34}╭───────────╮",
-            "type": "custom",
-        },
-//        {
-//            "key": "│ {#31} user    {#keys}│",
-//            "type": "title",
-//            "format": "{user-name}"
-//        },
-//        {
-//            "key": "│ {#32}󰇅 hname   {#keys}│",
-//            "type": "title",
-//           "format": "{host-name}"
-//        },
-        {
-            "key": "{#34}│ {#31}{icon} distro  {#keys}{#34}│",
-            "type": "os"
-        },
-    	{
-            "key": "{#34}│ {#32} kernel  {#keys}{#34}│",
-            "type": "kernel"
-        },
-//        {
-//            "key": "│ {#31}󰅐 uptime  {#keys}│",
-//            "type": "uptime"
-//        },
-//    	{
-//	    "key": "│ {#33}󰏔 pckgs   {#keys}│",
-//            "type": "packages"
-//        },
-        {
-            "key": "{#34}│ {#33}󰇄 wm      {#keys}{#34}│",
-            "type": "wm",
-            "format": "{1}"
-        },
-        {
-            "key": "{#34}│ {#35} term    {#keys}{#34}│",
-            "type": "terminal",
-            "format": "{1}"
-        },
-        {
-            "key": "{#34}│ {#36} shell   {#keys}{#34}│",
-            "type": "shell",
-            "format": "{1}"
-        },
-        {
-            "key": "{#34}│ {#31}󰍛 cpu     {#keys}{#34}│",
-            "type": "cpu",
-            "format": "{1}"
-        },
-        {
-            "key": "{#34}│ {#32}󰾲 gpu     {#keys}{#34}│",
-            "type": "gpu",
-            "format": "{2}"
-        },
-        {
-            "key": "{#34}│ {#33}󰉉 disk    {#keys}{#34}│",
-            "type": "disk",
-            "folders": "/"
-        },
-        {
-            "key": "{#34}│ {#35} memory  {#keys}{#34}│",
-            "type": "memory"
-        },
-//        {
-//            "key": "│ {#36}󰩟 network {#keys}│",
-//            "type": "localip",
-//            "format": "{ipv4} ({ifname})"
-//        },
-        {
-            "key": "{#34}├───────────┤",
-            "type": "custom"
-        },
-        {
-            "key": "{#34}│ {#36} colors  {#keys}{#34}│",
-            "type": "colors",
-            "symbol": "circle"
-        },
-        {
-            "key": "{#34}╰───────────╯",
-            "type": "custom"
-        }
-    ]
+    {
+      "key": "{#32} kernel  {#keys}{#37}  ",
+      "type": "kernel"
+    },
+    {
+      "key": "{#33}󰇄 wm      {#keys}{#37}  ",
+      "type": "wm",
+      "format": "{1}"
+    },
+    {
+      "key": "{#35} term    {#keys}{#37}  ",
+      "type": "terminal",
+      "format": "{1}"
+    },
+    {
+      "key": "{#36} shell   {#keys}{#37}  ",
+      "type": "shell",
+      "format": "{1}"
+    },
+    {
+      "key": "{#31}󰍛 cpu     {#keys}{#37}  ",
+      "type": "cpu",
+      "format": "{1}"
+    },
+    {
+      "key": "{#32}󰢮 gpu     {#keys}{#37}  ",
+      "type": "gpu",
+      "format": "{2}"
+    },
+    {
+      "key": "{#33} disk    {#keys}{#37}  ",
+      "type": "disk",
+      "folders": "/"
+    },
+    {
+      "key": "{#35} memory  {#keys}{#37}  ",
+      "type": "memory"
+    },
+    {
+      "key": "{#36} colors  {#keys}{#37}  ",
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
 }

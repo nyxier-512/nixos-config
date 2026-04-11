@@ -14,6 +14,7 @@
     # fastfetch
     ".config/fastfetch/config.jsonc".source = ../dotfiles/fastfetch/config.jsonc;
     ".config/fastfetch/figlet-3d-logo.txt".source = ../dotfiles/fastfetch/figlet-3d-logo.txt;
+        ".config/fastfetch/nixos-small.txt".source = ../dotfiles/fastfetch/nixos-small.txt;
 
     # mangowc
     ".config/mango/config.conf".source = ../dotfiles/mangowc/config.conf;

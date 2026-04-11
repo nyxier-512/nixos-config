@@ -4,7 +4,6 @@
     mangowc
     fastfetch
     alacritty
-    zellij
     rofi
     yazi
     zed
@@ -28,4 +27,11 @@
     kanagawa-icon-theme
     bibata-cursors
   ];
+  programs.xwayland.enable=true;
+  programs.fish.enable = true;
+  programs.neovim = {
+    enable  = true;
+    defaultEditor = true;
+  };
+  programs.dconf.enable = true;
 }

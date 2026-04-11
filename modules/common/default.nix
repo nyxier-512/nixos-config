@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./packages
+    ./services
     ./fonts.nix
     ./localization.nix
     ./networking.nix

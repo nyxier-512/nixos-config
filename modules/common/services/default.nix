@@ -8,5 +8,11 @@
       ];
       ly.enable=true;
     };
+    xserver = {
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
+    };
   };
 }

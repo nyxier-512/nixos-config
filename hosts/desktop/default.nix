@@ -5,6 +5,7 @@
     ./boot.nix
     ./hardware-configuration.nix
     ../../modules/common
+    ../../modules/gaming.nix
   ];
   networking.hostName = "desktop";
   system.stateVersion = stateVersion; # sytem state version, do NOT change

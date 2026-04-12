@@ -26,6 +26,13 @@
     kanagawa-gtk-theme
     kanagawa-icon-theme
     bibata-cursors
+    gamescope
+    mangohud
+    heroic
+    unimatrix
+    cbonsai
+    cava
+    lavat
   ];
   programs.xwayland.enable=true;
   programs.fish.enable = true;
@@ -34,4 +41,7 @@
     defaultEditor = true;
   };
   programs.dconf.enable = true;
+  programs.steam = {
+    enable = true;
+  };
 }

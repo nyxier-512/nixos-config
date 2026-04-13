@@ -1,5 +1,5 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    # Coloscheme
     set -l foreground DCD7BA normal
     set -l selection 2D4F67 brcyan
     set -l comment 727169 brblack
@@ -10,8 +10,6 @@ if status is-interactive
     set -l purple 957FB8 magenta
     set -l cyan 7AA89F cyan
     set -l pink D27E99 brmagenta
-
-    # Syntax Highlighting Colors
     set -g fish_color_normal $foreground
     set -g fish_color_command $cyan
     set -g fish_color_keyword $pink
@@ -26,16 +24,16 @@ if status is-interactive
     set -g fish_color_operator $green
     set -g fish_color_escape $pink
     set -g fish_color_autosuggestion $comment
-
-    # Completion Pager Colors
     set -g fish_pager_color_progress $comment
     set -g fish_pager_color_prefix $cyan
     set -g fish_pager_color_completion $foreground
     set -g fish_pager_color_description $comment
+
     set fish_greeting
 
-
     fastfetch
+
+    alias php-server="php -S localhost:8000"
 
     alias nixos-update-flake="nix flake update --flake  $HOME/nixos-config"
 
@@ -43,7 +41,7 @@ if status is-interactive
       sudo nixos-rebuild switch --flake "$HOME/nixos-config#$argv"
     end
 
-        function nixos-rebuild-flake-test
+    function nixos-rebuild-flake-test
         sudo nixos-rebuild test --flake "$HOME/nixos-config#$argv"
     end
 

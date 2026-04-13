@@ -137,6 +137,26 @@ require("lazy").setup({
     config = function()
       -- nix 
       vim.lsp.enable("nixd")
+      -- PHP (Intelephense)
+      vim.lsp.config("intelephense", {
+        cmd = { "intelephense", "--stdio" },
+        root_patterns = { "composer.json", ".git" },
+      })
+      vim.lsp.enable("intelephense")
+
+      -- HTML
+      vim.lsp.config("html", {
+        cmd = { "vscode-html-language-server", "--stdio" },
+        root_patterns = { "package.json", ".git", "index.html" },
+      })
+      vim.lsp.enable("html")
+
+      -- CSS
+      vim.lsp.config("cssls", {
+        cmd = { "vscode-css-language-server", "--stdio" },
+        root_patterns = { "package.json", ".git" },
+      })
+      vim.lsp.enable("cssls")
 
       -- lua
       vim.lsp.config("lua_ls", {

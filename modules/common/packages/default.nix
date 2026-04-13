@@ -8,7 +8,8 @@
     yazi
     zed
     qbittorrent
-    gimp
+    gimp2
+    
     librewolf
     tree
     waybar
@@ -30,6 +31,18 @@
     cbonsai
     cava
     lavat
+    # PHP Core
+    php
+    phpPackages.composer
+
+    # Language Servers
+    nodePackages.intelephense     # Superior PHP indexing (standard)
+    # phpactor                    # Alternative (excellent for refactoring)
+    vscode-langservers-extracted  # Provides HTML, CSS, and JSON LSPs
+    
+    # Formatters & Linters
+    phpPackages.php-cs-fixer
+    nodePackages.prettier         # Best for HTML/CSS formatting
   ];
   programs.xwayland.enable=true;
   programs.fish.enable = true;

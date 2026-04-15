@@ -1,0 +1,203 @@
+////////////////////////////////////////
+// ┌────────────────────────────────┐ //
+// │                                │ //
+// │  ██████╗  ██████╗ ███████╗██╗  │ //
+// │  ██╔══██╗██╔═══██╗██╔════╝██║  │ //
+// │  ██████╔╝██║   ██║█████╗  ██║  │ //
+// │  ██╔══██╗██║   ██║██╔══╝  ██║  │ //
+// │  ██║  ██║╚██████╔╝██║     ██║  │ //
+// │  ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝  │ //
+// │                                │ //
+// └────────────────────────────────┘ //
+////////////////////////////////////////
+
+configuration {
+    show-icons: true;
+    modi: "drun,window";
+    drun-display-format: "{name}";
+    display-drun: "" ;     
+    display-window: "";    
+    hover-select:               false;
+    scroll-method:              1;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+    window-format:              "{w} · {c} · {t}";
+    sidebar-mode: true;
+    sidebar-rows: 1;
+    sidebar-width: 80px;
+}
+
+* {
+    bg0:     #1f1f28;
+    bg1:     #2a2a37;
+    bg2:     #363646;
+    fg:      #dcd7ba;
+    red:     #c34043;
+    green:   #76946a;
+    yellow:  #c0a36e;
+    blue:    #7e9cd8;
+    grey0:   #727169;
+
+    font: "Inter 12";
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 600px;
+    height: 595px;
+    background-color: @blue; 
+    padding: 4px; 
+    border: 0px; 
+    border-radius: 13px;
+    spacing: 0;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0em;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+    background-color:            @bg0; 
+    border-radius:               10px;
+    border:                      0px;
+    border: 0px;
+}
+
+inputbar {
+    enabled: true;
+    spacing: 0px;
+    padding: 10px;
+    background-color: @bg1;
+    text-color: @fg;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    children: [ "entry-wrapper", "mode-switcher" ];
+    border: 0px;
+}
+
+entry-wrapper {
+    orientation: horizontal;
+    children: [ "textbox-prompt-colon", "entry" ];
+    expand: true;
+    background-color: transparent;
+    border: 0px;
+}
+
+textbox-prompt-colon {
+    font: "JetBrainsMono Nerd Font Propo 12";
+    enabled: true;
+    expand: false;
+    str: "   ";
+    background-color: @bg2;
+    text-color: @blue;
+    border-radius: 10px 0 0 10px;
+    horizontal-align: 0;
+    vertical-align: 0.5;
+    margin: 0;
+}
+
+entry {
+    enabled: true;
+    background-color: @bg2;
+    text-color: @fg;
+    placeholder-color: @grey0;
+    placeholder: "Search";
+    expand: true;
+    horizontal-align: 0;
+    blink: true;
+    padding: 8px 12px;
+    border-radius: 0 10px 10px 0;
+    margin: 0;
+    vertical-align: 0.5;
+}
+listbox {
+    padding:                     0;
+    spacing:                     0;
+    orientation:                 horizontal;
+    children:                    [ "listview"];
+    background-color:            transparent;
+}
+
+listview {
+    enabled: true;
+    columns: 1;
+    lines: 8;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 4px;
+    padding: 8px;
+    background-color: transparent;
+    text-color: @fg;
+    border: 0px;
+    border-radius: 0px 0px 0px 0px;
+    margin: 0;
+}
+
+element {
+    enabled: true;
+    spacing: 8px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin: 2px;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.normal,
+element alternate.normal,
+element normal.active,
+element alternate.active,
+element normal.urgent,
+element alternate.urgent {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @blue;
+    text-color: @bg0;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 32px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+mode-switcher {
+    spacing: 20px;
+    background-color: transparent;
+    margin: 0 0 0 20px;
+}
+
+button {
+    font: "JetBrainsMono Nerd Font Propo 12";
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: @bg2;
+    text-color: @fg;
+    font-weight: bold;
+}
+
+button selected {
+    background-color: @blue;
+    text-color: @bg0;
+}

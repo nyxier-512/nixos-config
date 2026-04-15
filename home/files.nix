@@ -37,5 +37,8 @@
     ".config/sway/start.sh".source = ../dotfiles/sway/start.sh;
     ".config/sway/reload.sh".source = ../dotfiles/sway/reload.sh;
     ".config/sway/colors.conf".source = ../dotfiles/sway/colors.conf;
+
+    # rofi
+    ".config/rofi/config.rasi".source = ../dotfiles/rofi/config.rasi;
   };
 }

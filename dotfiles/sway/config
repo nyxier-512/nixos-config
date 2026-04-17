@@ -7,7 +7,7 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty
+set $term foot
 set $fm $term -e yazi
 set $browser librewolf
 set $menu rofi -show drun

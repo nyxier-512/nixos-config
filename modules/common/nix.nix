@@ -2,10 +2,6 @@
 
 {
   nix = {
-    nixPath = [
-      "nixpkgs=${inputs.nixpkgs}"
-      "nixos-config=/home/${username}/nixos-config/config.nix"
-    ];
     settings = {
       experimental-features = [
         "nix-command"
@@ -15,7 +11,7 @@
     };
     gc = {
       automatic = true;
-      dates = "weekly";
+      dates = "daily";
       options = "--delete-older-than 10d";
     };
     package = pkgs.lixPackageSets.stable.lix;

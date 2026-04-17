@@ -40,5 +40,8 @@
 
     # rofi
     ".config/rofi/config.rasi".source = ../dotfiles/rofi/config.rasi;
+
+    # foot
+    ".config/foot/foot.ini".source = ../dotfiles/foot/foot.ini;
   };
 }

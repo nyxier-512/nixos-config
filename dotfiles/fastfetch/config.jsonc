@@ -17,54 +17,54 @@
   },
   "modules": [
     {
-      "key": "{#31}{icon} distro  {#keys}{#37}  ",
+      "key": "{#31}{icon} distro  {#keys}{#39}  ",
       "type": "os"
     },
     {
-      "key": "{#32} kernel  {#keys}{#37}  ",
+      "key": "{#32} kernel  {#keys}{#39}  ",
       "type": "kernel"
     },
     {
-      "key": "{#33}󰷛 dm      {#keys}{#37}  ",
+      "key": "{#33}󰷛 dm      {#keys}{#39}  ",
 	    "type": "lm"
 	  },
     {
-      "key": "{#33}󰇄 wm      {#keys}{#37}  ",
+      "key": "{#33}󰇄 wm      {#keys}{#39}  ",
       "type": "wm",
       "format": "{1}"
     },
     {
-      "key": "{#35} term    {#keys}{#37}  ",
+      "key": "{#35} term    {#keys}{#39}  ",
       "type": "terminal",
       "format": "{1}"
     },
     {
-      "key": "{#36} shell   {#keys}{#37}  ",
+      "key": "{#36} shell   {#keys}{#39}  ",
       "type": "shell",
       "format": "{1}"
     },
     {
-      "key": "{#31}󰍛 cpu     {#keys}{#37}  ",
+      "key": "{#31}󰍛 cpu     {#keys}{#39}  ",
       "type": "cpu",
       "format": "{1}"
     },
     {
-      "key": "{#32}󰢮 gpu     {#keys}{#37}  ",
+      "key": "{#32}󰢮 gpu     {#keys}{#39}  ",
       "type": "gpu",
       "format": "{2}"
     },
     {
-      "key": "{#33} disk    {#keys}{#37}  ",
+      "key": "{#33} disk    {#keys}{#39}  ",
       "type": "disk",
       "folders": "/"
     },
     {
-      "key": "{#35} memory  {#keys}{#37}  ",
+      "key": "{#35} memory  {#keys}{#39}  ",
       "type": "memory"
     },
 
     {
-      "key": "{#36} colors  {#keys}{#37}  ",
+      "key": "{#36} colors  {#keys}{#39}  ",
       "type": "colors",
       "symbol": "circle"
     }

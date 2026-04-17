@@ -9,6 +9,7 @@
     zed
     qbittorrent
     gimp2
+    foot
     
     librewolf
     tree

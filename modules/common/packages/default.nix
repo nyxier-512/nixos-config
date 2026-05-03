@@ -12,6 +12,8 @@
     foot
     nginx
     polymc
+    jdt-language-server
+    gradle
 
     polkit_gnome
     quickshell
@@ -58,28 +60,28 @@
     phpPackages.composer
 
     # Language Servers
-    nodePackages.intelephense     # Superior PHP indexing (standard)
+    nodePackages.intelephense # Superior PHP indexing (standard)
     # phpactor                    # Alternative (excellent for refactoring)
-    vscode-langservers-extracted  # Provides HTML, CSS, and JSON LSPs
+    vscode-langservers-extracted # Provides HTML, CSS, and JSON LSPs
 
     # Formatters & Linters
     phpPackages.php-cs-fixer
-    nodePackages.prettier         # Best for HTML/CSS formatting
+    nodePackages.prettier # Best for HTML/CSS formatting
   ];
-  programs.xwayland.enable=true;
+  programs.xwayland.enable = true;
   programs.fish.enable = true;
-  programs.sway.enable=true;
-    programs.sway.package = pkgs.swayfx;
+  programs.sway.enable = true;
+  programs.sway.package = pkgs.swayfx;
   programs.neovim = {
-    enable  = true;
+    enable = true;
     defaultEditor = true;
   };
   programs.dconf.enable = true;
-    xdg.portal.config = {
+  xdg.portal.config = {
     common = {
-        default = [
-            "wlr"
-        ];
+      default = [
+        "wlr"
+      ];
     };
   };
   xdg.portal.enable = true;
